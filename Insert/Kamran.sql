@@ -28,6 +28,14 @@ create table digital_banking.credit_cards (
 	);
 
 
+	alter table  digital_banking.CreditCardTransactions
+	add CardID int
+
+	alter table digital_banking.CreditCardTransactions
+	add constraint FK_CardID
+	foreign key (CardID) references digital_banking.credit_cards
+
+
 	create table digital_banking.OnlineBankingUsers (
 	UserID int primary key identity(1,1),
 	Username varchar(50),
@@ -76,6 +84,12 @@ create table digital_banking.credit_cards (
 	RemainingBalance decimal(15,2)
 	);
 
+ALTER TABLE loans_credits.LoanPayments
+ADD LoanID INT;
+
+ALTER TABLE loans_credits.LoanPayments
+ADD CONSTRAINT FK_LoanID
+FOREIGN KEY (LoanID) REFERENCES loans_credits.Loans(LoanID)
 
 	create table loans_credits.CreditScores (
 	CreditScore int,                                  --customerID fk
