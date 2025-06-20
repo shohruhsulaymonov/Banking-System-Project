@@ -39,7 +39,7 @@ CREATE TABLE Compliance_and_RM.KYC(
 	KYCID INT PRIMARY KEY IDENTITY(1,1),
 	CustomerID INT,
 	DocumentType VARCHAR(50),
-	DocumantNumber VARCHAR(30),
+	DocumentNumber VARCHAR(30),
 	VerifiedBy VARCHAR(100)
 );
 
