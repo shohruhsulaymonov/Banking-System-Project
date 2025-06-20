@@ -50,7 +50,7 @@ CREATE TABLE Compliance_and_RM.FraudDetection(
 	CustomerID INT,
 	TransactionID INT,
 	RiskLevel VARCHAR(20) CHECK(RiskLevel in ('Low', 'Moderate', 'High', 'Extreme')),
-	ReportedDate DATETIME
+	ReportedDate DATE
 );
 
 ------------------------------------------------------------
