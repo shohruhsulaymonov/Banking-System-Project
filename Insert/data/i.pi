@@ -1,3 +1,0 @@
-import pandas as pd
-table = pd.rad_csv('data\\AML.csv')
-table.head()
