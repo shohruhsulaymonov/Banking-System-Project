@@ -54,7 +54,7 @@ CREATE TABLE Compliance_and_RM.FraudDetection(
 );
 
 ------------------------------------------------------------
-CREATE TABLE Compliance_and_RM.AML_Cases(
+CREATE TABLE Compliance_and_RM.AML(
 	CaseID INT PRIMARY KEY IDENTITY(1,1),
 	CustomerID INT,
 	CaseType VARCHAR(50),
@@ -89,6 +89,6 @@ ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
 ALTER TABLE Compliance_and_RM.FraudDetection
 ADD FOREIGN KEY (TransactionID) REFERENCES digital_banking.Transactions(TransactionID);
 --------------------------------------------------------------------
-ALTER TABLE Compliance_and_RM.AML_Cases
+ALTER TABLE Compliance_and_RM.AML
 ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 
