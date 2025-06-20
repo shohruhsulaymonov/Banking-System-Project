@@ -21,7 +21,7 @@ CREATE TABLE HR_and_Payroll.EmployeeAttendance(
 	EmployeeID INT,
 	CheckInTime TIME(0),
 	CheckOutTime TIME(0),
-	TotalHours INT
+	TotalHours DECIMAL(2,1)
 );
 
 UPDATE HR_and_Payroll.EmployeeAttendance
