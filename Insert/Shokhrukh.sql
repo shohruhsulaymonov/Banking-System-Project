@@ -26,3 +26,24 @@ WITH(
 	FIELDTERMINATOR = ',',
 	ROWTERMINATOR = '\n'
 )
+BULK INSERT HR_and_Payroll.Departments
+FROM 'D:\fake_data\departments.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	ROWTERMINATOR = '\n'
+)
+BULK INSERT HR_and_Payroll.EmployeeAttendance
+FROM 'D:\fake_data\employee_attendance.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	ROWTERMINATOR = '\n'
+)
+BULK INSERT HR_and_Payroll.Salaries
+FROM 'D:\fake_data\salaries.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	ROWTERMINATOR = '\n'
+)
