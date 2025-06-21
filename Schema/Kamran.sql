@@ -139,7 +139,7 @@ add constraint FK_CustomerID
 foreign key (CustomerID) references Customers(CustomerID)	
 
 	create table loans_credits.DebtCollection (
-	DebtID int primary key identity,
+	DebtID int primary key identity(1,1),
 	AmountDue decimal(12,2),
 	DueDate date,                                          -- customerId fk
 	CollectorAssigned varchar(30)
