@@ -7,7 +7,7 @@ create schema digital_banking
 
 create table digital_banking.credit_cards (
 
-    CardID INT PRIMARY KEY identity,
+    CardID INT PRIMARY KEY identity(1,1),
     CustomerID INT,
     CardNumber VARCHAR(20) UNIQUE,
     CardType varchar(30),
