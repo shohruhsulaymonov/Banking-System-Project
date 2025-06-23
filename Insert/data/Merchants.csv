@@ -1,0 +1,201 @@
+MerchantID,MerchantName,Industry,Location,CustomerID
+1,Frank PLC,Retail,Potterview,243
+2,Gonzales Group,E-commerce,West David,177
+3,Rivera and Sons,Logistics,East Ianville,119
+4,"Conrad, Matthews and Flores",Logistics,Clementsmouth,223
+5,"Ochoa, Forbes and Wagner",Logistics,Alexberg,148
+6,"Sullivan, Rivera and Hale",Healthcare,Amberberg,132
+7,"Williams, Jackson and Steele",Logistics,Lake Eric,276
+8,Romero-Herrera,Retail,Robinshire,258
+9,"Fischer, Thompson and Brewer",Retail,Stevenchester,232
+10,Alexander PLC,Hospitality,Lake Sandramouth,124
+11,"Ramirez, Jimenez and Tate",E-commerce,Fosterberg,223
+12,Gillespie-Knight,Hospitality,New Carmenchester,113
+13,Griffin Ltd,Logistics,Jeremyton,193
+14,Preston-Wilson,Retail,Tonyhaven,149
+15,Watson-Odom,Healthcare,Elliottmouth,145
+16,Waters Group,Logistics,Lauramouth,161
+17,Carrillo-Mosley,Healthcare,Calebburgh,132
+18,Morgan and Sons,Retail,Lake Shelbyberg,198
+19,Walker PLC,Logistics,Andersonshire,258
+20,Grant Ltd,Logistics,Hillborough,125
+21,Church LLC,Retail,Webbhaven,241
+22,Juarez Ltd,Logistics,New Taylor,252
+23,Robinson-Hernandez,Healthcare,Jonesview,237
+24,Harris Inc,Healthcare,Lake Crystal,134
+25,"Peterson, Davis and Ray",E-commerce,Brownfort,181
+26,"Huang, Glover and Oliver",Healthcare,Tannerburgh,187
+27,Gordon Ltd,E-commerce,Rodriguezton,103
+28,Bailey LLC,Hospitality,East Stephanieport,232
+29,"Banks, Knapp and Brady",Healthcare,Colleenfort,242
+30,"Oliver, Stevens and Scott",E-commerce,Katherineburgh,214
+31,Dyer Inc,Retail,East Patrick,191
+32,Boyd Inc,Hospitality,Gillhaven,251
+33,Hawkins-Jackson,Hospitality,North Richard,131
+34,Walsh-Morris,Hospitality,Pecktown,161
+35,Lewis PLC,E-commerce,Flowersfort,205
+36,Butler-Lopez,Retail,Lake Stephenberg,189
+37,Herrera-Hughes,Retail,North Kevin,213
+38,"Williams, Herrera and King",Healthcare,Kimberlytown,264
+39,Thompson LLC,Logistics,Patrickhaven,158
+40,"Brock, Stone and Morales",Retail,Jonesborough,230
+41,Carter-Hall,Logistics,Graystad,151
+42,Jimenez Group,Retail,Feliciaburgh,152
+43,Hernandez Ltd,Logistics,Lake Lisabury,159
+44,Mcgrath Group,Healthcare,North Whitney,116
+45,Gordon-Watkins,Hospitality,Kristenview,274
+46,Harrison LLC,Hospitality,Port Samanthaberg,237
+47,"Hines, Smith and Barker",Logistics,Millerberg,248
+48,Lane-Jennings,Hospitality,South Stephen,209
+49,Leon Inc,Healthcare,North Troyfurt,184
+50,"Hickman, Munoz and Murphy",E-commerce,Jameston,181
+51,Barrera Ltd,E-commerce,North Natalie,168
+52,Mejia LLC,E-commerce,East Brianborough,136
+53,Foley-Mcdowell,Hospitality,Trevinoport,152
+54,Carr-Beasley,Healthcare,Samanthabury,279
+55,"Murphy, Johnson and Dickson",Healthcare,Jorgeport,167
+56,"Black, Young and Crosby",E-commerce,East Kevinville,212
+57,Savage-Nguyen,Healthcare,North Jeffery,221
+58,Willis-Simmons,Retail,Lake Maryhaven,242
+59,Martin-Johnson,Retail,Lesterberg,238
+60,Hall-Wood,Healthcare,Moorefort,177
+61,Hanson and Sons,Logistics,North Cassandra,130
+62,"Willis, Scott and Wagner",Retail,New Michaelburgh,223
+63,Merritt and Sons,E-commerce,Lopezberg,232
+64,Chandler Inc,Healthcare,North Nicoleshire,124
+65,"Graham, Stephens and Gomez",Logistics,Youngland,138
+66,Reyes Inc,Retail,Huffland,231
+67,Wong-Mahoney,Retail,West Aprilland,274
+68,Rodriguez-Mitchell,Retail,Barnesberg,273
+69,Herrera-White,E-commerce,Watsonview,241
+70,"Daniel, Montoya and Washington",Hospitality,Levyfurt,261
+71,Brown-Jones,Hospitality,West Kathleentown,115
+72,"Flores, Miller and Stephens",Healthcare,West Alex,213
+73,Estrada and Sons,Healthcare,Floresville,178
+74,Greene PLC,E-commerce,Anaborough,212
+75,"Zimmerman, Conrad and Valenzuela",Logistics,Holmesland,139
+76,"Davies, Smith and Butler",E-commerce,Lake Staceyfurt,246
+77,Butler Inc,Healthcare,West Sabrina,221
+78,Rios-Rodriguez,Retail,West Sean,266
+79,Mendoza-Hernandez,Hospitality,Andrewmouth,129
+80,Johnson Group,E-commerce,Feliciaside,132
+81,"Roberts, Richardson and Cummings",Healthcare,North Shawnborough,207
+82,Martinez-Hopkins,Retail,East Jessicastad,188
+83,Lowe-Campbell,Hospitality,Nguyenmouth,243
+84,Smith-Cantu,Logistics,New Kyle,177
+85,Carter Inc,Healthcare,West James,229
+86,Rodgers and Sons,Healthcare,Shaffershire,125
+87,"Johnson, Calhoun and Barnes",Logistics,East Shawnborough,130
+88,Alvarez-Massey,Hospitality,Lake Rebeccamouth,267
+89,"Jackson, Chavez and Rhodes",Retail,East Johnside,237
+90,Conner-Bailey,E-commerce,Autumnmouth,157
+91,Watson-Santos,Retail,Jacksonville,147
+92,Gordon-Miranda,Retail,Oliviahaven,201
+93,Alexander LLC,Retail,Christianton,185
+94,Allen-Roberson,Hospitality,Johnathanport,236
+95,"Davis, Parker and Barrett",Logistics,Wheelershire,162
+96,Morrison Group,Healthcare,East Jacqueline,185
+97,Lin-Jones,Hospitality,North Dwayneberg,161
+98,Garcia LLC,E-commerce,Port Brett,170
+99,Pena LLC,E-commerce,East Rebecca,249
+100,"Ryan, Hill and Tran",Logistics,New Logan,234
+101,Fox-Bell,Retail,North Nicholasport,247
+102,Garcia Inc,Healthcare,Ericfort,126
+103,Golden-Allen,Retail,North Christopherland,174
+104,"Ramirez, Gardner and Robinson",Logistics,Santanaberg,213
+105,"Alvarez, Barker and Clark",Retail,East Joshuaview,110
+106,"Price, Cantu and Mcneil",E-commerce,New Patriciaview,259
+107,Bailey-Baker,Retail,Mitchellstad,174
+108,"Wilson, Scott and Morgan",Hospitality,North Toddmouth,185
+109,White LLC,Hospitality,Charlesside,232
+110,Small-Beltran,Healthcare,Kevinborough,143
+111,"Stephens, Morrison and Lam",E-commerce,South Garyburgh,254
+112,Roman Inc,Logistics,New Jonathanburgh,177
+113,Simmons and Sons,Healthcare,Matthewview,125
+114,"Baldwin, Stevens and Johnson",Logistics,Callahanmouth,266
+115,"Baker, Taylor and Duran",Hospitality,Martinbury,127
+116,Mccoy Inc,Retail,East Maria,300
+117,Rivera Group,Hospitality,East Timothyfurt,121
+118,Russell-Underwood,Retail,East Jenniferchester,286
+119,"Vazquez, Watson and Hicks",Logistics,West James,159
+120,"Mccarthy, Taylor and Moran",E-commerce,Caitlinmouth,204
+121,"Ward, Dixon and Montoya",Healthcare,New Joshuaside,261
+122,"Johnson, Hernandez and Benjamin",Hospitality,New Samuelchester,248
+123,Smith-Foster,Healthcare,Jenniferbury,201
+124,"Boyd, Gutierrez and Andersen",E-commerce,Amandafurt,223
+125,Jones-Smith,Retail,Claudiastad,280
+126,Richardson-Harris,Hospitality,Summerfurt,235
+127,Rivera-Coleman,Logistics,Stanleyhaven,230
+128,"Beltran, Shaffer and Richmond",Logistics,Lewisbury,132
+129,"Johns, Mason and Smith",Hospitality,New Ianburgh,121
+130,Ford-Anderson,Logistics,North Danielstad,167
+131,Carroll-Gutierrez,Hospitality,Juliafort,206
+132,"Kerr, Rojas and Jordan",Retail,Lake Bruce,150
+133,Pham PLC,Hospitality,South Joannafurt,292
+134,Carter LLC,Healthcare,Conwayton,291
+135,Marquez and Sons,E-commerce,Ericmouth,224
+136,Callahan-Garcia,Healthcare,New Christopherton,184
+137,Cooper Inc,Healthcare,West Gwendolynport,151
+138,"Norton, Williams and Martin",Healthcare,Lake Charles,283
+139,"Duke, Gibson and Lucas",Hospitality,West Christine,159
+140,"Gomez, Mendoza and Cobb",Healthcare,Williamsside,260
+141,Jacobs-Johnson,Logistics,Myerschester,211
+142,"Delacruz, Cochran and Carroll",Hospitality,West Trevor,274
+143,Morrow-Miller,Logistics,Smithmouth,105
+144,Lowery-Dunn,Hospitality,Cisnerosborough,121
+145,Duncan-Smith,Retail,Lake Maria,263
+146,Phillips-Dixon,E-commerce,Dustinmouth,238
+147,Stevenson-Klein,Hospitality,Lanetown,197
+148,Fisher-Wilson,E-commerce,Lake Stephentown,116
+149,"Hanna, Lopez and Johnson",Healthcare,Smithshire,218
+150,Butler-Clayton,Retail,South Jenniferburgh,164
+151,Meyer-Guzman,Logistics,South Susan,106
+152,Stone LLC,Retail,Barbarastad,221
+153,Nguyen PLC,E-commerce,Schneiderview,212
+154,Nelson PLC,E-commerce,Gregoryfort,258
+155,Giles-Skinner,Healthcare,New Cody,155
+156,Phillips and Sons,Retail,Ellisfort,223
+157,"Sanchez, Wood and Martin",Healthcare,Hawkinsview,142
+158,Acosta-Patel,E-commerce,Turnerland,254
+159,"Moore, Orr and Franco",Retail,Torresland,246
+160,Ramsey-Garcia,E-commerce,South Carlport,254
+161,Evans Inc,Logistics,Deleonmouth,234
+162,Santana Inc,Hospitality,Christopherport,220
+163,"Dunlap, Walters and Sutton",Hospitality,East Bethmouth,300
+164,Jones Inc,E-commerce,West Kaitlinfurt,182
+165,Watts-Reeves,E-commerce,Jonathanview,294
+166,Franklin-Williams,Retail,South Ashley,133
+167,Harrison-Ross,Retail,Lake Donnastad,222
+168,Long-Garcia,Retail,Donaldhaven,260
+169,"Hill, Hansen and Kelly",Healthcare,West Tinashire,120
+170,"Love, Dunn and Johnson",E-commerce,New Frank,148
+171,Green Group,Healthcare,Santosview,276
+172,Perry Group,Retail,Gilbertfurt,164
+173,"Logan, Simmons and Medina",Healthcare,Cherylview,293
+174,Leach-Wright,Retail,Port Leonard,122
+175,"Barnes, Brown and Mann",Logistics,Wagnerside,184
+176,Roberson Group,Logistics,New Jillianfort,246
+177,"Mcdonald, Brooks and Ramos",Retail,Juliechester,259
+178,Williams-Wagner,Logistics,Thompsonton,171
+179,Roth Group,Hospitality,North Jamesstad,216
+180,Cox-Henderson,Hospitality,South Katieside,120
+181,Wilson-Howard,Logistics,Port Kathleenfurt,103
+182,"Johnson, Johnson and Rogers",Retail,West Richard,242
+183,"Underwood, Sullivan and Hernandez",E-commerce,Zhangtown,152
+184,Porter-Fitzgerald,Logistics,Bradleyview,169
+185,"Vargas, Norris and Thomas",E-commerce,Gregoryside,189
+186,Macias Group,Logistics,Donnaborough,121
+187,Joyce PLC,Retail,Lake Michael,286
+188,Diaz-Combs,Healthcare,Gutierrezberg,108
+189,"Morse, Trevino and Byrd",E-commerce,New Kristinland,127
+190,"Hurley, Lucas and Scott",E-commerce,Port Yvonne,288
+191,Stout-Fowler,Healthcare,Jasonside,138
+192,"Middleton, Dean and Singh",Hospitality,Port Joshua,128
+193,"Huff, Turner and Hall",Logistics,Joshuashire,289
+194,"Johnson, Boyd and Hunt",Logistics,South Kevintown,263
+195,"Larsen, Schroeder and Barnes",Healthcare,Grantborough,119
+196,"Lawson, Clarke and Church",Retail,North Teresa,236
+197,Flowers-Rodriguez,E-commerce,Lake Karen,123
+198,Perry Group,Logistics,West Erin,138
+199,"Smith, Gonzalez and Brady",E-commerce,Courtneyland,157
+200,Rhodes Ltd,Retail,Lake Jodimouth,199
