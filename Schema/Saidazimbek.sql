@@ -48,16 +48,16 @@ CREATE TABLE Merchant_Services. MerchantTransactions(
 -------------------------------------------------------------------
 ------------------------------------------------------------
 ALTER TABLE Investments_and_treasure.Investments
-ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+ADD FOREIGN KEY (CustomerID) REFERENCES  dbo.Customers(CustomerID);
 ------------------------------------------------------------
 ALTER TABLE Investments_and_treasure.InvesStockTradingAccounts
-ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+ADD FOREIGN KEY (CustomerID) REFERENCES  dbo.Customers(CustomerID);
 -------------------------------------------------------------
 ALTER TABLE Investments_and_treasure.ForeignExchange
-ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+ADD FOREIGN KEY (CustomerID) REFERENCES  dbo.Customers(CustomerID);
 -------------------------------------------------------------
 ALTER TABLE Merchant_Services.Merchants
-ADD FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);
+ADD FOREIGN KEY (CustomerID) REFERENCES  dbo.Customers(CustomerID);
 -------------------------------------------------------------
 ALTER TABLE Merchant_Services.MerchantTransactions 
 ADD FOREIGN KEY (MerchantID) REFERENCES Merchant_Services.Merchants(MerchantID);
