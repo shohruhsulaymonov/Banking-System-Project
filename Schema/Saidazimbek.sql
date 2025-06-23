@@ -43,7 +43,7 @@ CREATE TABLE Merchant_Services. MerchantTransactions(
 	MerchantID INT,
 	Amount DECIMAL(18,2),
 	Payment_Method VARCHAR(20),
-	Date DATETIME DEFAULT GETDATE()
+	Date DATETIME
 );
 -------------------------------------------------------------------
 ------------------------------------------------------------
