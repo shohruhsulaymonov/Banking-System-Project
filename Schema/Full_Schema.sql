@@ -351,3 +351,99 @@ CREATE TABLE Merchant_Services.MerchantTransactions(
 	Date DATETIME
 );
 -----------------------
+
+
+
+
+ALTER TABLE Core.Accounts
+ADD FOREIGN KEY (CustomerID) REFERENCES Core.Customers(CustomerID)
+ALTER TABLE Core.Accounts
+ADD FOREIGN KEY (BranchID) REFERENCES Core.Branches(BranchID)
+ALTER TABLE Core.Transactions
+ADD FOREIGN KEY (AccountID) REFERENCES Core.Accounts(AccountID)
+ALTER TABLE Core.Employees
+ADD FOREIGN KEY (BranchID) REFERENCES Core.Branches(BranchID)
+ALTER TABLE Core.Branches
+ADD FOREIGN KEY (ManagerID) REFERENCES Core.Employees(EmployeeID)
+ALTER TABLE Insurance_Security.InsurancePolicies
+ADD FOREIGN KEY (CustomerID) REFERENCES Core.Customers(CustomerID)
+ALTER TABLE Insurance_Security.Claims
+ADD FOREIGN KEY (PolicyID) REFERENCES Insurance_Security.InsurancePolicies(PolicyID)
+Alter table Insurance_Security.UserAccessLogs
+add foreign key (UserID) references Digital_Banking.OnlineBankingUsers(UserID)
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+ALTER TABLE HR_and_Payroll.Departments
+ADD FOREIGN KEY (ManagerID) REFERENCES  Core.Employees(EmployeeID);
+--------------------------------------------------------------------
+ALTER TABLE HR_and_Payroll.Salaries
+ADD FOREIGN KEY (EmployeeID) REFERENCES Core.Employees(EmployeeID);
+--------------------------------------------------------------------
+ALTER TABLE HR_and_Payroll.EmployeeAttendance
+ADD FOREIGN KEY (EmployeeID) REFERENCES Core.Employees(EmployeeID);
+--------------------------------------------------------------------
+ALTER TABLE Compliance_and_RM.KYC
+ADD FOREIGN KEY (CustomerID) REFERENCES Core.Customers(CustomerID);
+--------------------------------------------------------------------
+ALTER TABLE Compliance_and_RM.FraudDetection
+ADD FOREIGN KEY (CustomerID) REFERENCES Core.Customers(CustomerID);
+
+ALTER TABLE Compliance_and_RM.FraudDetection
+ADD FOREIGN KEY (TransactionID) REFERENCES Core.Transactions(TransactionID);
+--------------------------------------------------------------------
+ALTER TABLE Compliance_and_RM.AML_Cases
+ADD FOREIGN KEY (CustomerID) REFERENCES Core.Customers(CustomerID)
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+	alter table digital_banking.CreditCards
+	add foreign key (CustomerID) references Core.Customers(CustomerID)
+--------------------------------------------------------------------
+
+	alter table digital_banking.CreditCardTransactions
+	add foreign key (CardID) references digital_banking.CreditCards(CardID)
+--------------------------------------------------------------------
+
+	alter table digital_banking.OnlineBankingUsers
+	add foreign key (CustomerID) references Core.Customers(CustomerID)
+--------------------------------------------------------------------
+	alter table digital_banking.BillPayments
+	add foreign key (CustomerID) references Core.Customers(CustomerID)	
+--------------------------------------------------------------------
+	alter table digital_banking.MobileBankingTransactions
+	add foreign key (CustomerID) references Core.Customers(CustomerID)	
+--------------------------------------------------------------------
+
+alter table loans_credits.Loans
+add foreign key (CustomerID) references Core.Customers(CustomerID)	
+--------------------------------------------------------------------
+
+ALTER TABLE loans_credits.LoanPayments
+ADD FOREIGN KEY (LoanID) REFERENCES loans_credits.Loans(LoanID)
+--------------------------------------------------------------------
+
+alter table loans_credits.CreditScores
+add foreign key (CustomerID) references Core.Customers(CustomerID)
+--------------------------------------------------------------------
+
+alter table loans_credits.DebtCollection
+add foreign key (CustomerID) references Core.Customers(CustomerID)
+
+
+-------------------------------------------------------------------
+------------------------------------------------------------
+ALTER TABLE Investments_and_treasury.Investments
+ADD FOREIGN KEY (CustomerID) REFERENCES  Core.Customers(CustomerID);
+------------------------------------------------------------
+ALTER TABLE Investments_and_treasury.InvesStockTradingAccounts
+ADD FOREIGN KEY (CustomerID) REFERENCES  Core.Customers(CustomerID);
+-------------------------------------------------------------
+ALTER TABLE Investments_and_treasury.ForeignExchange
+ADD FOREIGN KEY (CustomerID) REFERENCES  Core.Customers(CustomerID);
+-------------------------------------------------------------
+ALTER TABLE Merchant_Services.Merchants
+ADD FOREIGN KEY (CustomerID) REFERENCES  Core.Customers(CustomerID);
+-------------------------------------------------------------
+ALTER TABLE Merchant_Services.MerchantTransactions 
+ADD FOREIGN KEY (MerchantID) REFERENCES Merchant_Services.Merchants(MerchantID);
