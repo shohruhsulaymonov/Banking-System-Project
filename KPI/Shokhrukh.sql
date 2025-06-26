@@ -10,6 +10,9 @@ from Loans_Credit.Loans
 where Status = 'Ongoing'
 group by CustomerID
 having count(*) > 1
+--3.
+select distinct TransactionID
+from Compliance_Risk.FraudDetection
 
 
 
