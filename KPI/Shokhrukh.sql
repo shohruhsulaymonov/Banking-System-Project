@@ -1,0 +1,28 @@
+
+--Shows which type of transaction is more prone to fraud
+Declare @total_trans float;
+set @total_trans = (select COUNT(*) 
+from Core_Banking.Transactions);
+
+with RisKByType as(
+select TransactionType, count(RiskLevel) as RiskCount
+from Compliance_Risk.FraudDetection fd
+join Core_Banking.Transactions t
+on fd.TransactionID = t.TransactionID
+where RiskLevel in ('Critical', 'High', 'Medium')
+group by TransactionType
+)
+
+select 
+	TransactionType, 
+	100*RiskCount/@total_trans as FraudProne
+from RisKByType
+-------------------------------------------------------------
+--Reflects the proportion of statuses of investigations
+select
+	Status,
+	round(cast(100*count(*) as float)/(select Count(*) from Compliance_Risk.AMLCases), 2) as Pct
+from
+Compliance_Risk.AMLCases
+group by Status
+order by pct desc
