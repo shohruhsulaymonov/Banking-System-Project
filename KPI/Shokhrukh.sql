@@ -1,4 +1,30 @@
+--1•	Top 3 Customers with the Highest Total Balance Across All Accounts 
+select top 3 CustomerID, sum(Balance) as TotalBalance
+from Core_Banking.Accounts
+where Status = 'Active'
+order by TotalBalance desc
+	
+	
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------
 --Shows which type of transaction is more prone to fraud
 Declare @total_trans float;
 set @total_trans = (select COUNT(*) 
