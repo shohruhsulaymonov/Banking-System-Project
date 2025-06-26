@@ -26,3 +26,7 @@ from
 Compliance_Risk.AMLCases
 group by Status
 order by pct desc
+-------------------------------------------------------------
+--Calcualtes the average salary per employee
+select avg(BaseSalary + Bonus - Deductions) as AvgSalaryPerEmployee
+from Human_Resources.Salaries
