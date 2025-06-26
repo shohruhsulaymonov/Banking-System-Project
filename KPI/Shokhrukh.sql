@@ -3,8 +3,13 @@ select top 3 CustomerID, sum(Balance) as TotalBalance
 from Core_Banking.Accounts
 where Status = 'Active'
 order by TotalBalance desc
-	
-	
+-------------------------------------------------------
+--2. •	Customers Who Have More Than One Active Loan
+select CustomerID, count(*) as LoanCount
+from Loans_Credit.Loans
+where Status = 'Ongoing'
+group by CustomerID
+having count(*) > 1
 
 
 
