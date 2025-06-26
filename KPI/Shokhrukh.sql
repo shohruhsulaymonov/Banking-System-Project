@@ -11,8 +11,15 @@ where Status = 'Ongoing'
 group by CustomerID
 having count(*) > 1
 --3.
-select distinct TransactionID
-from Compliance_Risk.FraudDetection
+select distinct 
+	t.TransactionID, 
+	a.AccountID
+from Compliance_Risk.FraudDetection as fd
+left join Core_Banking.Transactions as t
+on t.TransactionID = fd.TransactionID
+left join Core_Banking.Accounts a
+on a.AccountID = t.AccountID
+
 
 
 
