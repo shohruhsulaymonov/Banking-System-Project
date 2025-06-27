@@ -57,7 +57,21 @@ and l1.Currency <> l2.Currency
 and abs(datediff(minute, l1.date, l2.date)) <= 10
 and l1.Status in('Completed', 'Failed')
 and l2.Status in('Completed', 'Failed')
+---------------------------------------------
+with cte as(
+select case when mt.TransactionID is not null then 1 else 0 end Isdigital
+from Core_Banking.Transactions t
+left join Digital_Banking_Payments.MobileBankingTransactions mt
+on t.TransactionID = mt.TransactionID
+)
 
+select round(100*0.1*sum(Isdigital)/count(Isdigital), 2) 
+from cte
+--------------------------------------
+select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
+from Loans_Credit.Loans
+group by LoanType
+order by TotalLoanAmount desc
 
 
 
