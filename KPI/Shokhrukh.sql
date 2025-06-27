@@ -41,6 +41,23 @@ join LargeTrans l2
 on l1.TransactionID < l2.TransactionID
 and l1.AccountID = l2.AccountID
 and abs(datediff(minute, l1.date, l2.date)) <= 60
+--6 Multiple transactions from different countries within 10 minutes
+with LargeTrans as(select *
+from Core_Banking.Transactions
+where Status in('Completed', 'Failed')
+)
+
+SELECT l1.AccountID, l1.TransactionID AS Tx1, l1.date AS Tx1Time,
+       l2.TransactionID AS Tx2, l2.date AS Tx2Time
+from LargeTrans l1
+join LargeTrans l2
+on l1.TransactionID < l2.TransactionID
+and l1.AccountID = l2.AccountID
+and l1.Currency <> l2.Currency
+and abs(datediff(minute, l1.date, l2.date)) <= 10
+and l1.Status in('Completed', 'Failed')
+and l2.Status in('Completed', 'Failed')
+
 
 
 
