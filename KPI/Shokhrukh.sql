@@ -72,7 +72,21 @@ select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
 from Loans_Credit.Loans
 group by LoanType
 order by TotalLoanAmount desc
+---------------------------------------
+with FraudTrans as(
+select 
+	case when FraudID is not null then 1 else 0 end IsFraudulent
+from Core_Banking.Transactions t
+left join Compliance_Risk.FraudDetection fd
+on t.TransactionID = fd.TransactionID
+)
 
+SELECT 
+    CAST(
+        CAST(ROUND(100.0 * SUM(IsFraudulent) / COUNT(IsFraudulent), 2) AS DECIMAL(10, 2)) 
+    AS VARCHAR) + '%' AS FraudRate
+FROM FraudTrans;
+---------------------------------------------------
 
 
 
