@@ -88,7 +88,14 @@ SELECT
 FROM FraudTrans;
 ---------------------------------------------------
 
-
+with cte AS(
+select 
+	sum((ROI*Amount)/100) as TotalReturn,
+	SUM(Amount) as TotalInvestment
+from Investments_Treasury.Investments
+)
+select 100*1.0*(TotalReturn-TotalInvestment)/TotalInvestment as ROIPercentage
+from cte
 
 
 
