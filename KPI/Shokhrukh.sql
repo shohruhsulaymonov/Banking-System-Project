@@ -19,7 +19,14 @@ left join Core_Banking.Transactions as t
 on t.TransactionID = fd.TransactionID
 left join Core_Banking.Accounts a
 on a.AccountID = t.AccountID
-
+--4. •	Total Loan Amount Issued Per Branch
+Select BranchID, sum(Amount) TotalLoanAmount
+from Core_Banking.Accounts a
+join Loans_Credit.Loans l
+on a.CustomerID = l.CustomerID
+where l.Status = 'Ongoing'
+group by BranchID
+order by TotalLoanAmount desc
 
 
 
