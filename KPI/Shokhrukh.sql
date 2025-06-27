@@ -105,14 +105,25 @@ from Investments_Treasury.StockTradingAccounts
 group by BrokerageFirm
 order by CurrentTotalInvestmentValue desc
 --Current investment values per Brokerage firm
+----------------------------------------------
 
+select Industry, count(*) as MerchantCount
+from Merchant_Services.Merchants
+group by Industry
+--Shows the number of merchants are from each industry
+go
+with Merchant as(
+select 
+	case when MerchantID is not null then 1 else 0 end as IsMerchant
+from Core_Banking.Customers c
+left join Merchant_Services.Merchants m
+on c.CustomerID = m.CustomerID
+)
 
-
-
-
-
-
-
+select 100*1.0*sum(IsMerchant)/count(IsMerchant) B2B_Ratio
+from Merchant
+--Indicates the proportion that make up merchants among customers
+	
 -------------------------------------------------------------
 --Shows which type of transaction is more prone to fraud
 Declare @total_trans float;
