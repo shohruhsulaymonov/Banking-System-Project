@@ -96,15 +96,15 @@ from Investments_Treasury.Investments
 )
 select 100*1.0*(TotalReturn-TotalInvestment)/TotalInvestment as ROIPercentage
 from cte
-
-
-
-
-
-
-
-
-
+----------------------------------------------------
+select sum(currentvalue) CurrentTotalValueOfInvestments
+from Investments_Treasury.StockTradingAccounts
+--Total amount of current investment value
+select BrokerageFirm, sum(currentvalue) CurrentTotalInvestmentValue
+from Investments_Treasury.StockTradingAccounts
+group by BrokerageFirm
+order by CurrentTotalInvestmentValue desc
+--Current investment values per Brokerage firm
 
 
 
