@@ -65,7 +65,7 @@ left join Digital_Banking_Payments.MobileBankingTransactions mt
 on t.TransactionID = mt.TransactionID
 )
 
-select round(100*1.0*sum(Isdigital)/count(Isdigital), 2) 
+select round(100*1.0*sum(Isdigital)/count(Isdigital), 2) as MobileTransactionRate
 from cte
 --------------------------------------
 select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
