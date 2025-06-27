@@ -127,13 +127,16 @@ select
 from RisKByType
 -------------------------------------------------------------
 --Reflects the proportion of statuses of investigations
-select
+with CaseCategory as(
+Select distinct
 	Status,
-	round(cast(100*count(*) as float)/(select Count(*) from Compliance_Risk.AMLCases), 2) as Pct
-from
-Compliance_Risk.AMLCases
-group by Status
-order by pct desc
+	count(*) over (Partition by status) NumOfCases,
+	count(*) over() TotalCases
+from Compliance_Risk.AMLCases
+)
+
+select Status, format(round(100*1.0*NumOfCases/TotalCases, 2), '0.##') as Percentage
+from CaseCategory
 -------------------------------------------------------------
 --Calcualtes the average salary per employee
 select avg(BaseSalary + Bonus - Deductions) as AvgSalaryPerEmployee
