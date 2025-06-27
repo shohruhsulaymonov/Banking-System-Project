@@ -27,6 +27,21 @@ on a.CustomerID = l.CustomerID
 where l.Status = 'Ongoing'
 group by BranchID
 order by TotalLoanAmount desc
+--5. multiple large transactions within a short time frame
+with LargeTrans as(select *
+from Core_Banking.Transactions
+where Amount > 10000
+and Status in('Completed', 'Failed')
+)
+
+SELECT l1.AccountID, l1.TransactionID AS Tx1, l1.date AS Tx1Time,
+       l2.TransactionID AS Tx2, l2.date AS Tx2Time
+from LargeTrans l1
+join LargeTrans l2
+on l1.TransactionID < l2.TransactionID
+and l1.AccountID = l2.AccountID
+and abs(datediff(minute, l1.date, l2.date)) <= 60
+
 
 
 
