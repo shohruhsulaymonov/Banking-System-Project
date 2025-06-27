@@ -10,6 +10,8 @@ JOIN dbo.Customers c ON c.CustomerID = a.CustomerID
 JOIN loans_credits.Loans l ON c.CustomerID = l.CustomerID
 GROUP BY a.CustomerID;
 ------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 SELECT 
     a.AccountID,
     ROUND(
