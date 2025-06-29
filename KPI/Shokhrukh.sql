@@ -101,12 +101,6 @@ from cte
 select sum(currentvalue) CurrentTotalValueOfInvestments
 from Investments_Treasury.StockTradingAccounts
 --Total amount of current investment value
-
-select BrokerageFirm, sum(currentvalue) CurrentTotalInvestmentValue
-from Investments_Treasury.StockTradingAccounts
-group by BrokerageFirm
-order by CurrentTotalInvestmentValue desc
---Current investment values per Brokerage firm
 ----------------------------------------------
 
 select Industry, count(*) as MerchantCount
@@ -127,7 +121,7 @@ from Merchant
 --Indicates the proportion that makes up merchants among customers
 	
 -------------------------------------------------------------
---Shows which type of transaction is more prone to fraud
+--Shows which type of transaction is more fraud-prone
 Declare @total_trans float;
 set @total_trans = (select COUNT(*) 
 from Core_Banking.Transactions);
@@ -161,16 +155,3 @@ from CaseCategory
 --Calcualtes the average salary per employee
 select avg(BaseSalary + Bonus - Deductions) as AvgSalaryPerEmployee
 from Human_Resources.Salaries
----------------------------------------------------------------------
-
-select BranchName, count(*) NumOfEmps
-from Core_Banking.Employees e
-join Core_Banking.Branches b
-on e.BranchID = b.BranchID
-group by BranchName
---Shows how many employees work in each branch
-
-select Department, count(*) NumOfEmps
-from Core_Banking.Employees
-group by Department
---shows how many employees there are in each department
