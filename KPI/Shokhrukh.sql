@@ -68,6 +68,7 @@ on t.TransactionID = mt.TransactionID
 select round(100*1.0*sum(Isdigital)/count(Isdigital), 2) as MobileTransactionRate
 from cte
 --------------------------------------
+--Average loan amount considering interest rate per loan type
 select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
 from Loans_Credit.Loans
 group by LoanType
@@ -87,7 +88,7 @@ SELECT
     AS VARCHAR) + '%' AS FraudRate
 FROM FraudTrans;
 ---------------------------------------------------
-
+--Total ROI Return On Investments
 with cte AS(
 select 
 	sum((ROI*Amount)/100) as TotalReturn,
@@ -100,6 +101,7 @@ from cte
 select sum(currentvalue) CurrentTotalValueOfInvestments
 from Investments_Treasury.StockTradingAccounts
 --Total amount of current investment value
+
 select BrokerageFirm, sum(currentvalue) CurrentTotalInvestmentValue
 from Investments_Treasury.StockTradingAccounts
 group by BrokerageFirm
@@ -122,7 +124,7 @@ on c.CustomerID = m.CustomerID
 
 select 100*1.0*sum(IsMerchant)/count(IsMerchant) B2B_Ratio
 from Merchant
---Indicates the proportion that make up merchants among customers
+--Indicates the proportion that makes up merchants among customers
 	
 -------------------------------------------------------------
 --Shows which type of transaction is more prone to fraud
