@@ -102,3 +102,19 @@ where LoanType = @LoanType
 group by LoanType
 order by TotalLoanAmount desc
 end
+----------------------------
+--Shows the number of merchants are from each industry
+create proc sp_Merchant_per_Industry @Industry varchar(50) = Null as
+if @Industry is Null
+begin
+select Industry, count(*) as MerchantCount
+from Merchant_Services.Merchants
+group by Industry
+end
+else
+begin
+select Industry, count(*) as MerchantCount
+from Merchant_Services.Merchants
+where Industry = @Industry
+group by Industry
+end
