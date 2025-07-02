@@ -121,7 +121,7 @@ from Merchant
 --Indicates the proportion that makes up merchants among customers
 	
 -------------------------------------------------------------
---Shows which type of transaction is more fraud-prone
+--Shows the percentage of fraudulent transactions for each transaction type
 Declare @total_trans float;
 set @total_trans = (select COUNT(*) 
 from Core_Banking.Transactions);
