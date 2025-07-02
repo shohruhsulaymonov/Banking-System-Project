@@ -60,4 +60,26 @@ as
 
 exec sp_Employees_per_Branch 'Lake Nicole Branch'
 
+--Shows total amount of loands issued for a specified branchID, othewise desplays all branches with their corresponding loan amounts
 
+create proc sp_Branch_LoanAmount @BranchID int = Null as
+if @BranchID is Null
+begin
+Select BranchID, sum(Amount) TotalLoanAmount
+from Core_Banking.Accounts a
+join Loans_Credit.Loans l
+on a.CustomerID = l.CustomerID
+where l.Status = 'Ongoing'
+group by BranchID
+order by TotalLoanAmount desc
+end
+else
+begin
+Select BranchID, sum(Amount) TotalLoanAmount
+from Core_Banking.Accounts a
+join Loans_Credit.Loans l
+on a.CustomerID = l.CustomerID
+where l.Status = 'Ongoing' and @BranchID = BranchID
+group by BranchID
+order by TotalLoanAmount desc
+end
