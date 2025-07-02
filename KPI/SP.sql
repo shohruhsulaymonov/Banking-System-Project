@@ -83,3 +83,22 @@ where l.Status = 'Ongoing' and @BranchID = BranchID
 group by BranchID
 order by TotalLoanAmount desc
 end
+
+-----------------------------
+--Shows total loan amount for a specified loan type, if no loan type is given, displays loana amount for each loan type
+create proc sp_LoanAmount_per_LoanType @LoanType varchar(30) = Null as
+if @LoanType is Null
+begin
+select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
+from Loans_Credit.Loans
+group by LoanType
+order by TotalLoanAmount desc
+end
+else
+begin
+select LoanType, avg(Amount*(1+InterestRate)) TotalLoanAmount
+from Loans_Credit.Loans
+where LoanType = @LoanType
+group by LoanType
+order by TotalLoanAmount desc
+end
