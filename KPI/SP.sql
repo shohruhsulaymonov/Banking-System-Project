@@ -34,7 +34,7 @@ as
 			group by Department
 		end
 
-exec sp_Employees_per_Department 'FInance'
+exec sp_Employees_per_Department 'Finance'
 -------------------------------------------------
 --shows how many employees there are in a specified Branch
 
@@ -117,4 +117,43 @@ select Industry, count(*) as MerchantCount
 from Merchant_Services.Merchants
 where Industry = @Industry
 group by Industry
+end
+
+--Shows the percentage of fraudulent transactions for each transaction type, if no transaction type is given. Otherwise, showa all
+
+create proc sp_Fraudulent_Trans_Pct @Type varchar(20) = Null as
+Declare @total_trans float;
+set @total_trans = (select COUNT(*) 
+from Core_Banking.Transactions);
+if @Type is Null
+begin
+with RisKByType as(
+select TransactionType, count(RiskLevel) as RiskCount
+from Compliance_Risk.FraudDetection fd
+join Core_Banking.Transactions t
+on fd.TransactionID = t.TransactionID
+group by TransactionType
+)
+
+select 
+	TransactionType, 
+	100*RiskCount/@total_trans as FraudProne
+from RisKByType
+end
+
+else
+begin
+with RisKByType as(
+select TransactionType, count(RiskLevel) as RiskCount
+from Compliance_Risk.FraudDetection fd
+join Core_Banking.Transactions t
+on fd.TransactionID = t.TransactionID
+group by TransactionType
+)
+
+select 
+	TransactionType, 
+	100*RiskCount/@total_trans as FraudProne
+from RisKByType
+where TransactionType = @Type
 end
