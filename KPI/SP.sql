@@ -157,3 +157,37 @@ select
 from RisKByType
 where TransactionType = @Type
 end
+-----------------------
+--Reflects the percentage of statuses of investigations
+create proc sp_Investigation_Status @Status varchar(20) = Null as
+if @Status is Null
+begin
+	with CaseCategory as(
+	Select distinct
+		Status,
+		count(*) over (Partition by status) NumOfCases,
+		count(*) over() TotalCases
+	from Compliance_Risk.AMLCases
+	)
+
+	select 
+		Status, 
+		format(round(100*1.0*NumOfCases/TotalCases, 2), '0.##') as Percentage
+	from CaseCategory
+end
+else
+begin
+	with CaseCategory as(
+	Select distinct
+		Status,
+		count(*) over (Partition by status) NumOfCases,
+		count(*) over() TotalCases
+	from Compliance_Risk.AMLCases
+	)
+
+	select 
+		Status, 
+		format(round(100*1.0*NumOfCases/TotalCases, 2), '0.##') as Percentage
+	from CaseCategory
+	where Status = @Status
+end
